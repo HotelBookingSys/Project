@@ -1,0 +1,193 @@
+/* Full-screen payment page */
+.payment-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* Payment title animation */
+.payment-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeSlideDown 1s ease-in-out forwards;
+}
+
+/* Payment form with glass effect */
+.payment-form {
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input fields */
+.payment-form input,
+.payment-form select {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder text color */
+.payment-form input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Focus effect */
+.payment-form input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Payment button */
+.payment-btn {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff8c00, #ff4500);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.4);
+}
+
+.payment-btn:hover {
+    background: linear-gradient(135deg, #e07b00, #d14000);
+    transform: scale(1.07);
+    box-shadow: 0px 6px 15px rgba(255, 140, 0, 0.6);
+}
+
+/* Payment method selection */
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.payment-method label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Credit card preview with 3D effect */
+.card-preview {
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 3D Hover Effect on Card */
+.card-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Card details */
+.card-number {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.card-holder {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Smooth popup animation */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeInPopup 0.5s ease-in-out;
+}
+
+.popup h2 {
+    font-size: 1.8rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Fade-in animation for popups */
+@keyframes fadeInPopup {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Animation for Smooth Entry */
+@keyframes fadeSlideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 20px;
+    }
+
+    .payment-title {
+        font-size: 2.5rem;
+    }
+
+    .payment-form {
+        width: 90%;
+    }
+
+    .card-preview {
+        width: 90%;
+        height: 180px;
+    }
+}

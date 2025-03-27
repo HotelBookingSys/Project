@@ -1,0 +1,100 @@
+/* 🌟 Full Page Styling */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: url("/loginbg.jpg");
+  
+    padding: 20px;
+}
+
+/* 🌟 Main Content Box */
+.content-container {
+    width: 90%;
+    max-width: 400px; /* Keeps form compact */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 🌟 Heading */
+.content-container h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 🌟 Input Fields */
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #eeff00;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff4343;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(106, 17, 203, 0.3);
+}
+
+/* 🌟 Login & Signup Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* 🌟 Toggle Text */
+.toggle-text {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #00e1ff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.toggle-text:hover {
+    color: #0dff6a;
+}
+
+/* 🌟 Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .content-container {
+        width: 95%;
+        padding: 20px;
+    }
+}
